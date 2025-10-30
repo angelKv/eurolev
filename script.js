@@ -54,7 +54,6 @@ function calculateVAT() {
 function clearFields() {
   document.getElementById('amountBGN').value = '';
   document.getElementById('amountEUR').value = '';
-  document.getElementById('vatRate').value = '20';
   document.getElementById('netAmount').textContent = '-';
   document.getElementById('grossAmount').textContent = '-';
   document.getElementById('vatAmount').textContent = '-';
