@@ -1,0 +1,146 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe0b2, #ffcc80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: #fff3e0;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+
+}
+
+h1 {
+  color: #e65100;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bf360c;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 120px; /* фиксирана ширина за подравняване */
+  text-align: right;
+  font-weight: bold;
+}
+
+.input-fixed {
+  width: 180px;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}}
+
+input, select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  padding: 6px;
+}
+
+button {
+  background-color: #fb8c00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+  background-color: #ef6c00;
+}
+
+
+.clearBtn {
+  background-color: #dc3545; /* червен фон */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clearBtn:hover {
+  background-color: #c82333;
+}
+
+
+.results {
+  margin-top: 20px;
+  color: #6d4c41;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 10px;
+  text-align: left;
+}
+
+.results p {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.results span {
+  min-width: 160px;
+  display: inline-block;
+  text-align: right;
+  visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 20px;
+  }
+  input, select {
+    font-size: 13px;
+  }
+  button {
+    width: 100%;
+  }
+}
+}

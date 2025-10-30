@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ДДС Калкулатор с конверсия между лева и евро">
+  <title>ДДС Калкулатор</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+	<div class="layout-container">
+
+  <div class="calculator">
+    
+    <h1 id="title">ДДС Калкулатор</h1>
+
+    <div class="form-group">
+      <label for="amountBGN" id="labelAmountBGN">Сума (лв):</label>
+      <input type="number" id="amountBGN" step="0.01" oninput="convertToEUR()" class="input-fixed">
+    </div>
+
+    <div class="form-group">
+      <label for="amountEUR" id="labelAmountEUR">Сума (EUR):</label>
+      <input type="number" id="amountEUR" readonly class="input-fixed">
+    </div>
+
+    <div class="form-group">
+      <label for="vatRate" id="labelRate">ДДС (%):</label>
+      <input type="number" id="vatRate" class="input-fixed" value="20">
+    </div>
+
+    <div class="form-group">
+      <label for="vatType" id="labelType">Сумата е:</label>
+      <select id="vatType">
+        <option value="with" id="optionWith">С ДДС</option>
+        <option value="without" id="optionWithout">Без ДДС</option>
+      </select>
+    </div>
+
+    <button onclick="calculateVAT()" id="calculateBtn">Изчисли</button>
+    <button class="clearBtn" onclick="clearFields()">Изчисти</button>
+
+    <div class="results">
+      <p><strong id="labelNet">Сума без ДДС:</strong> <span id="netAmount">-</span></p>
+      <p><strong id="labelGross">Сума с ДДС:</strong> <span id="grossAmount">-</span></p>
+      <p><strong id="labelVAT">ДДС сума:</strong> <span id="vatAmount">-</span></p>
+    </div>
+	
+<div class="info-box">
+    <h3>Допълнителна информация</h3>
+    <p>Този калкулатор изчислява ДДС върху сума в лева и показва еквивалента в евро. Валутният курс е фиксиран: 1 EUR = 1.95583 BGN.</p>
+    <p>Можете да въведете стойност, да изберете ставка на ДДС и да получите резултати веднага.</p>
+  </div>
+</div>
+</body>
+</html>
